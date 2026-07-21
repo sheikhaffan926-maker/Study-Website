@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="StudyWave: an eye-catching study hub for planning, focus, and revision." />
+  <title>StudyWave | Smart Study Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#home">StudyWave</a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#planner">Planner</a>
+        <a href="#tips">Tips</a>
+        <a href="#footer">Contact</a>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">Dark</button>
+    </header>
+
+    <main>
+      <section id="home" class="hero-section">
+        <div class="hero-copy">
+          <p class="eyebrow">Study smarter, not harder</p>
+          <h1>Build focus with stylish study routines.</h1>
+          <p class="hero-text">StudyWave helps you plan sessions, track progress, and stay motivated with an easy-to-use study dashboard.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#planner">Start Planning</a>
+            <a class="btn btn-secondary" href="#features">Discover Tools</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-card">
+            <span class="label">Daily Focus</span>
+            <h2>Study Session</h2>
+            <p>3 tasks completed · 2 hrs left</p>
+            <div class="progress-bar"><span style="width: 64%"></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="feature-grid">
+        <div class="section-intro">
+          <p class="eyebrow">Designed for learners</p>
+          <h2>Everything you need for a better study flow.</h2>
+        </div>
+        <div class="grid-cards">
+          <article class="feature-card">
+            <h3>Smart Planner</h3>
+            <p>Create study blocks, prioritize subjects, and revisit tasks with a clear daily view.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Focus Timer</h3>
+            <p>Use built-in focus sessions to stay on track and reset with a refresh break timer.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Revision Highlights</h3>
+            <p>Capture quick study notes, key ideas, and revision cards for every subject.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="planner" class="planner-section">
+        <div class="planner-copy">
+          <p class="eyebrow">Plan your day</p>
+          <h2>Smart study planning made easy.</h2>
+          <p>Set subjects, break tasks into focused sessions, and watch your progress grow.</p>
+          <ul class="checklist">
+            <li>Organize topics by priority</li>
+            <li>Assign time blocks and review cycles</li>
+            <li>Get instant motivation from progress visuals</li>
+          </ul>
+        </div>
+        <div class="planner-card">
+          <div class="card-header">
+            <div>
+              <span>Next session</span>
+              <strong id="session-name">Math Practice</strong>
+            </div>
+            <span class="pill">40 min</span>
+          </div>
+
+          <div class="timer-display">
+            <span id="timer">40:00</span>
+          </div>
+          <div class="timer-controls">
+            <button id="startBtn" class="btn btn-outline">Start</button>
+            <button id="pauseBtn" class="btn btn-outline">Pause</button>
+            <button id="resetBtn" class="btn btn-outline">Reset</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="tips" class="tips-section">
+        <div class="section-intro">
+          <p class="eyebrow">Study tips</p>
+          <h2>Improve retention with research-backed habits.</h2>
+        </div>
+        <div class="tips-grid">
+          <article class="tip-card">
+            <h3>Active Recall</h3>
+            <p>Test yourself frequently instead of rereading notes to strengthen memory.</p>
+          </article>
+          <article class="tip-card">
+            <h3>Pomodoro Rhythm</h3>
+            <p>Work in focused bursts and reward yourself with short breaks for better concentration.</p>
+          </article>
+          <article class="tip-card">
+            <h3>Weekly Review</h3>
+            <p>Schedule a review session every week to refresh concepts before exams.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer-section">
+      <div>
+        <h2>Ready to study with confidence?</h2>
+        <p>Use StudyWave to turn your study routine into a smooth, focused habit.</p>
+      </div>
+      <div class="footer-actions">
+        <a class="btn btn-primary" href="#home">Let’s begin</a>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
