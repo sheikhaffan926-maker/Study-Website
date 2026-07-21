@@ -16,7 +16,7 @@ resource "aws_dynamodb_table" "counter_table" {
 
 # 2. S3 Bucket 
 resource "aws_s3_bucket" "web_bucket" {
-  bucket = "my-study-website-bucket-unique-2026" # Is naam ko thoda badal dena agar error aaye
+  bucket = "my-study-website-bucket-unique-2026" 
 }
 
 # 3. Remove Public Access Block 
