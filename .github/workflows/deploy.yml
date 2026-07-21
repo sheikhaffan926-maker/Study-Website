@@ -22,4 +22,4 @@ jobs:
 
     - name: Sync Files to S3
       run: |
-      aws s3 sync . s3://my-study-website-bucket-unique-2026 --exclude ".git*" --exclude ".github*" --exclude "*.tf*" --exclude "terraform.*"
+       aws s3 sync . s3://my-study-website-bucket-unique-2026 --exclude ".git*" --exclude ".github*" --exclude "*.tf*" --exclude "terraform.*"
