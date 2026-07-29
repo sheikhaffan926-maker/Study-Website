@@ -55,7 +55,7 @@ resource "aws_s3_bucket_website_configuration" "web_config" {
   }
 }
 
-# 6. AUTOMATION: HTML, JS aur CSS files 
+# 6. AUTOMATION: HTML, JS CSS files 
 resource "aws_s3_object" "html" {
   bucket       = aws_s3_bucket.web_bucket.id
   key          = "index.html"
