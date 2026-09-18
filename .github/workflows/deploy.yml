@@ -11,7 +11,20 @@ jobs:
 
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Install Client Dependencies
+      working-directory: ./client
+      run: npm install
+
+    - name: Build Client App
+      working-directory: ./client
+      run: npm run build
 
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v2
@@ -22,4 +35,11 @@ jobs:
 
     - name: Sync Files to S3
       run: |
-       aws s3 sync . s3://my-study-website-bucket-unique-2026 --exclude ".git*" --exclude ".github*" --exclude "*.tf*" --exclude "terraform.*"
+        aws s3 sync . s3://my-study-website-bucket-unique-2026 --delete \
+          --exclude ".git*" \
+          --exclude ".github*" \
+          --exclude "*.tf*" \
+          --exclude "terraform.*" \
+          --exclude "client/**" \
+          --exclude "node_modules/**"
+        aws s3 sync ./client/dist s3://my-study-website-bucket-unique-2026 --delete
